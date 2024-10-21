@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'mulish';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel {
+  @apply bg-cover bg-center bg-no-repeat h-[80vh] rounded-[40px] text-white cursor-pointer flex-[0.5] m-[10px] relative transition-[flex] duration-[0.7s] ease-[ease-in]
+}
+
+.active {
+  @apply bg-cover bg-center bg-no-repeat h-[80vh] rounded-[40px] text-white cursor-pointer flex-[5] m-[10px] relative transition-[flex] duration-[0.7s] ease-[ease-in]
+}
+
+.photoTitle {
+  @apply text-[24px] absolute bottom-[20px] left-[20px] m-0 opacity-0
+}
+
+.photoTitleActive {
+  @apply text-[24px] absolute bottom-[20px] left-[20px] m-0 opacity-100 transition-opacity duration-[0.3s] ease-[ease-in] delay-[0.4s]
+}
